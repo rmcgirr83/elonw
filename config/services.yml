@@ -1,0 +1,7 @@
+services:
+    rmcgirr83.elonw.listener:
+        class: rmcgirr83\elonw\event\listener
+        arguments:
+            - @template
+        tags:
+            - { name: event.listener }
