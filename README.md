@@ -5,7 +5,7 @@ phpBB 3.1 extension that uses jQuery to force external links to open in a new wi
 
 
 
-[![Build Status](https://travis-ci.org/RMcGirr83/elonw.svg?branch=master)](https://travis-ci.org/RMcGirr83/elonw)
+[![Build Status](https://travis-ci.org/RMcGirr83/elonw.svg)](https://travis-ci.org/RMcGirr83/elonw)
 ## Installation
 
 ### 1. clone
