@@ -2,7 +2,7 @@
 	"name": "rmcgirr83/elonw",
 	"type": "phpbb-extension",
 	"description": "Uses jQuery to force external links to open in a new window",
-	"homepage": "https://github.com/RMcGirr83/php-3.1-ext-elonw",
+	"homepage": "https://github.com/RMcGirr83/elonw",
 	"version": "1.0.0",
 	"time": "2014-10-28",
 	"keywords": ["phpbb", "extension", "external links open in new window"],
