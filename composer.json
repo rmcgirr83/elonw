@@ -16,13 +16,14 @@
 		}
 	],
 	"require": {
-		"php": ">=5.3.3"
+		"php": ">=5.3.3",
+		"composer/installers": "~1.0"
 	},
 	"require-dev": {
 		"phpbb/epv": "dev-master"
 	},
 	"extra": {
-		"display-name": "ELONW",
+		"display-name": "External Links Open in New Window",
 		"soft-require": {
 			"phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
 		}
