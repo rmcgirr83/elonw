@@ -35,7 +35,7 @@ class ucp_listener implements EventSubscriberInterface
 	* @param \phpbb\request\request $request
 	* @param \phpbb\template\template $template
 	* @param \phpbb\user $user
-	* @return \vse\topicpreview\event\ucp_listener
+	* @return \rmcgirr83\elonw\event\ucp_listener
 	* @access public
 	*/
 	public function __construct(\phpbb\config\config $config, \phpbb\request\request $request, \phpbb\template\template $template, \phpbb\user $user)
@@ -86,7 +86,7 @@ class ucp_listener implements EventSubscriberInterface
 	}
 
 	/**
-	* Add user's Topic Preview option state into the sql_array
+	* Add user's elonw option state into the sql_array
 	*
 	* @param object $event The event object
 	* @return null
