@@ -1,7 +1,7 @@
 <?php
 /**
 *
-* External Links Open in New Window [English]
+* External Links Open in New Window [Arabic]
 *
 * @copyright (c) 2014 Rich McGirr
 * @license GNU General Public License, version 2 (GPL-2.0)
