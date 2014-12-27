@@ -5,15 +5,15 @@ phpBB 3.1 extension that uses jQuery to force external links to open in a new wi
 
 
 
-[![Build Status](https://travis-ci.org/RMcGirr83/elonw.svg)](https://travis-ci.org/RMcGirr83/elonw)
+[![Build Status](https://travis-ci.org/RMcGirr83/phpBB-3.1-elonw.svg?branch=master)](https://travis-ci.org/RMcGirr83/phpBB-3.1-elonw)
 ## Installation
 
 ### 1. clone
-Clone (or download and move) the repository into the folder phpBB3/ext/rmcgirr83/elonw:
+Clone (or download and move) the repository into the folder ext/rmcgirr83/elonw:
 
 ```
 cd phpBB3
-git clone https://github.com/RMcGirr83/elonw.git ext/rmcgirr83/elonw/
+git clone https://github.com/RMcGirr83/phpBB-3.1-elonw.git ext/rmcgirr83/elonw/
 ```
 
 ### 2. activate
