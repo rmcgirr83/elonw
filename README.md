@@ -1,4 +1,4 @@
-phpbb-3.1-ext-ELONW
+phpBB-3.1-ext-ELONW
 =========================
 
 phpBB 3.1 extension that uses jQuery to force external links to open in a new window when clicked on.
