@@ -51,7 +51,7 @@ class listener implements EventSubscriberInterface
 		return array(
 			'core.page_header' => 'main',
 			'core.ucp_prefs_personal_data'			=> 'ucp_prefs_get_data',
-			'core.ucp_prefs_personal_update_data'	=> 'ucp_prefs_set_data',			
+			'core.ucp_prefs_personal_update_data'	=> 'ucp_prefs_set_data',
 		);
 	}
 
