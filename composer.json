@@ -4,7 +4,7 @@
 	"description": "Uses jQuery to force external links to open in a new window",
 	"homepage": "https://github.com/RMcGirr83/elonw",
 	"version": "1.0.1",
-	"time": "2015-05-04",
+	"time": "2015-07-07",
 	"keywords": ["phpbb", "extension", "external links open in new window"],
 	"license": "GPL-2.0",
 	"authors": [
@@ -26,6 +26,11 @@
 		"display-name": "External Links Open in New Window",
 		"soft-require": {
 			"phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+		},
+		"version-check": {
+			"host": "www.phpbb.com",
+			"directory": "/customise/db/extension/elonw",
+			"filename": "version_check"
 		}
 	}
 }
