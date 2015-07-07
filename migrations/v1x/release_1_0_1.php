@@ -15,11 +15,11 @@ class release_1_0_1 extends \phpbb\db\migration\migration
 	{
 		return isset($this->config['elonw_version']) && version_compare($this->config['elonw_version'], '1.0.1', '>=');
 	}
-	
+
 	static public function depends_on()
 	{
 		return array('\rmcgirr83\elonw\migrations\release_1_0_0_data.php');
-	}	
+	}
 
 	public function update_data()
 	{
