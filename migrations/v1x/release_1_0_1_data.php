@@ -9,7 +9,7 @@
 
 namespace rmcgirr83\elonw\migrations\v1x;
 
-class release_1_0_1 extends \phpbb\db\migration\migration
+class release_1_0_1_data extends \phpbb\db\migration\migration
 {
 	public function effectively_installed()
 	{
@@ -18,7 +18,7 @@ class release_1_0_1 extends \phpbb\db\migration\migration
 
 	static public function depends_on()
 	{
-		return array('\rmcgirr83\elonw\migrations\release_1_0_0_data.php');
+		return array('\rmcgirr83\elonw\migrations\v1x\release_1_0_0_data.php');
 	}
 
 	public function update_data()
