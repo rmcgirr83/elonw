@@ -3,7 +3,7 @@
 *
 * External Links Open in New Window [Arabic]
 *
-* @copyright (c) 2014 Rich McGirr
+* @copyright (c) 2015 Rich McGirr
 * @license GNU General Public License, version 2 (GPL-2.0)
 *
 * Translated By : Bassel Taha Alhitary - www.alhitary.net
@@ -35,5 +35,5 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ELONW_CHOICE'			=> 'فتح الروابط الخارجية في نافذة جديدة',
+	'ELONW'	=> 'يفتح في نافذة جديدة',
 ));
