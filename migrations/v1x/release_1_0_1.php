@@ -9,7 +9,7 @@
 
 namespace rmcgirr83\elonw\migrations\v1x;
 
-class release_1_0_1_data extends \phpbb\db\migration\migration
+class release_1_0_1 extends \phpbb\db\migration\migration
 {
 	public function effectively_installed()
 	{

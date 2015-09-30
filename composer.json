@@ -5,7 +5,11 @@
 	"homepage": "https://github.com/RMcGirr83/elonw",
 	"version": "1.0.1",
 	"time": "2015-07-07",
-	"keywords": ["phpbb", "extension", "external links open in new window"],
+    "keywords": [
+        "phpbb",
+        "extension",
+        "external links open in new window"
+    ],
 	"license": "GPL-2.0",
 	"authors": [
 		{

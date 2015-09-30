@@ -35,7 +35,7 @@ class listener implements EventSubscriberInterface
 	* @param \phpbb\request\request $request
 	* @param \phpbb\template\template $template
 	* @param \phpbb\user $user
-	* @return \rmcgirr83\elonw\event\ucp_listener
+	* @return \rmcgirr83\elonw\event\listener
 	* @access public
 	*/
 	public function __construct(\phpbb\config\config $config, \phpbb\request\request $request, \phpbb\template\template $template, \phpbb\user $user)
