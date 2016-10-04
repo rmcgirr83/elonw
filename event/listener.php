@@ -57,8 +57,6 @@ class listener implements EventSubscriberInterface
 
 	public function main($event)
 	{
-		// add lang file
-		$this->user->add_lang_ext('rmcgirr83/elonw', 'common');
 		$this->template->assign_vars(array(
 			'S_ELONW'	=>	!empty($this->user->data['user_elonw']) ? true : false,
 		));

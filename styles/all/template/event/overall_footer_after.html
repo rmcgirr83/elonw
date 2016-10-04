@@ -1,9 +1,19 @@
 <!-- IF S_ELONW -->
 <script type="text/javascript">
-var elonw_title = '{LA_ELONW}';
+var source=removeSubdomain(location.hostname);
+
 (function($) {
-	source=removeSubdomain(location.hostname);
-	$('a[href^="http://"], a[href^="https://"], a[href^="ftp://"]').filter(function(){return this.hostname&&removeSubdomain(this.hostname)!==source}).attr("onclick","window.open(this.href);return false;").attr("rel", "nofollow").attr("title", elonw_title).addClass("elonw");
+	'use strict';
+	$(document).on('click',('a'), function() {
+		var href = $(this).attr('href');
+		var hostname = this.hostname;
+		if(hostname && removeSubdomain(hostname)!==source)
+		{
+			window.open(href);
+			return false;
+		}
+	});	
+
 	$('.forum_link').each(function(){
 		$(this).find('a').attr("onclick","window.open(this.href);return false;").attr("rel", "nofollow");
 	});	
