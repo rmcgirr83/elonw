@@ -1,22 +1,20 @@
 <!-- IF S_ELONW -->
 <script type="text/javascript">
+var elonw_title = '{LA_ELONW}';
 var source=removeSubdomain(location.hostname);
-
+$(document).on('click',('a[href^="http://"], a[href^="https://"], a[href^="ftp://"]'), function() {
+   var href = $(this).attr('href');
+   var hostname = this.hostname;
+   if(hostname && removeSubdomain(hostname)!==source)
+   {
+      window.open(href);
+      return false;
+   }
+});
 (function($) {
-	'use strict';
-	$(document).on('click',('a'), function() {
-		var href = $(this).attr('href');
-		var hostname = this.hostname;
-		if(hostname && removeSubdomain(hostname)!==source)
-		{
-			window.open(href);
-			return false;
-		}
-	});	
-
-	$('.forum_link').each(function(){
-		$(this).find('a').attr("onclick","window.open(this.href);return false;").attr("rel", "nofollow");
-	});	
+   $('.forum_link').each(function(){
+      $(this).find('a').attr("onclick","window.open(this.href);return false;").attr("rel", "nofollow");
+   });   
 })(jQuery);
 function removeSubdomain(a,b){return a.split(".").slice(-(b||2)).join(".")};
 </script>
