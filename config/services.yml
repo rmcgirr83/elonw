@@ -2,9 +2,9 @@ services:
     rmcgirr83.elonw.listener:
         class: rmcgirr83\elonw\event\listener
         arguments:
-            - @config
-            - @request
-            - @template
-            - @user
+            - '@config'
+            - '@request'
+            - '@template'
+            - '@user'
         tags:
             - { name: event.listener }
