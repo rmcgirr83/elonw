@@ -7,7 +7,7 @@ $(document).on('click',('a[href^="http://"], a[href^="https://"], a[href^="ftp:/
    var hostname = this.hostname;
    if(hostname && removeSubdomain(hostname)!==source)
    {
-      window.open(href);
+      window.open(href, '_blank', 'noreferrer, noopener');
       return false;
    }
 });
