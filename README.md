@@ -5,7 +5,7 @@ phpBB extension that uses jQuery to force external links to open in a new window
 
 
 
-[![Build Status](https://travis-ci.com/rmcgirr83/phpBB-3.1-elonw.svg?branch=master)](https://travis-ci.com/rmcgirr83/phpBB-3.1-elonw)
+[![Build Status](https://travis-ci.com/rmcgirr83/elonw.svg?branch=master)](https://travis-ci.com/rmcgirr83/elonw)
 ## Installation
 
 ### 1. clone
