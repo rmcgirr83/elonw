@@ -1,44 +1,6 @@
-<!-- IF S_ELONW -->
-<script type="text/javascript">
-	"use strict";
-	var elonw_title = '{LA_ELONW}';
-	var source=removeSubdomain(location.hostname);
-	var IgnoreClasses = [
-		'posterip',
-		'share-button',
-		'fancybox',
-		'lightbox',
-		'colorbox'
-	];
-	var NotInClass = true;
-	$(document).on('click',('a[href^="http://"], a[href^="https://"], a[href^="ftp://"]'), function() {
-		if ($(this).attr('class') !== undefined)
-		{
-			var ClassList = $(this).attr('class').split(/\s+/);
-			$(ClassList).each(function() { 
-				if($.inArray(this, IgnoreClasses) !== -1)
-				{
-					NotInClass = false;
-				}
-			});
-		}
-		if ($(this).attr('onclick') !== undefined)
-		{
-			NotInClass = false;
-		}
-		var href = $(this).attr('href');
-		var hostname = this.hostname;
-		if(hostname && removeSubdomain(hostname)!==source && NotInClass)
-		{
-			window.open(href, '_blank', 'noreferrer, noopener');
-			return false;
-		}	
-	});
-	(function($) {
-	   $('.forum_link').each(function(){
-		  $(this).find('a').attr("onclick","window.open(this.href);return false;").attr("rel", "nofollow, norefrrer, noopener");
-	   });
-	})(jQuery);
-	function removeSubdomain(a,b){return a.split(".").slice(-(b||2)).join(".")};
+{% if S_ELONW %}
+<script>
+		var elonw_title = "{{ lang('ELONW')|e('js') }}";
 </script>
-<!-- ENDIF -->
+{% INCLUDEJS '@rmcgirr83_elonw/js/elonw.js' %}
+{% endif %}

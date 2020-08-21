@@ -2,7 +2,7 @@ services:
     rmcgirr83.elonw.listener:
         class: rmcgirr83\elonw\event\listener
         arguments:
-            - '@config'
+            - '@language'
             - '@request'
             - '@template'
             - '@user'
