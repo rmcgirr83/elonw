@@ -37,8 +37,6 @@
 		});
 
 		$(document).on('click',('a[href^="http://"], a[href^="https://"], a[href^="ftp://"]'), function() {
-			//e.preventDefault();
-			//e.stopPropagation();
 			if ($(this).attr('class') !== undefined)
 			{
 				var ClassList = $(this).attr('class').split(/\s+/);
@@ -57,8 +55,7 @@
 			if(this.hostname && removeSubdomain(this.hostname)!==source && NotInClass)
 			{
 				window.open(href, '_blank', 'noreferrer, noopener');
-				e.preventDefault();
-				e.stopPropagation();
+				return false;
 			}
 		});
 

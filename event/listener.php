@@ -53,24 +53,55 @@ class listener implements EventSubscriberInterface
 
 	static public function getSubscribedEvents()
 	{
-		return array(
-			'core.user_setup'						=> 'user_setup',
-			'core.page_header' 						=> 'main',
-			'core.ucp_prefs_personal_data'			=> 'ucp_prefs_get_data',
-			'core.ucp_prefs_personal_update_data'	=> 'ucp_prefs_set_data',
-		);
+		return [
+			'core.acp_extensions_run_action_after'	=>	'acp_extensions_run_action_after',
+			'core.user_setup'						=>	'user_setup',
+			'core.page_header' 						=>	'page_header',
+			'core.ucp_prefs_personal_data'			=>	'ucp_prefs_get_data',
+			'core.ucp_prefs_personal_update_data'	=>	'ucp_prefs_set_data',
+		];
 	}
 
+	/* Display additional metadate in extension details
+	*
+	* @param $event			event object
+	* @param return null
+	* @access public
+	*/
+	public function acp_extensions_run_action_after($event)
+	{
+		if ($event['ext_name'] == 'rmcgirr83/elonw' && $event['action'] == 'details')
+		{
+			$this->language->add_lang('common', $event['ext_name']);
+			$this->template->assign_vars([
+				'L_BUY_ME_A_BEER_EXPLAIN'	=> $this->language->lang('BUY ME A BEER_EXPLAIN', '<a href="' . $this->language->lang('BUY_ME_A_BEER_URL') . '" target="_blank" rel=”noreferrer noopener”>', '</a>'),
+				'S_BUY_ME_A_BEER_ELONW' 	=> true,
+			]);
+		}
+	}
+
+	/* Add the lang vars to the users language
+	*
+	* @param $event			event object
+	* @param return null
+	* @access public
+	*/
 	public function user_setup($event)
 	{
 		$this->language->add_lang('common', 'rmcgirr83/elonw');
 	}
 
-	public function main($event)
+	/* Add the css file
+	*
+	* @param $event			event object
+	* @param return null
+	* @access public
+	*/
+	public function page_header($event)
 	{
-		$this->template->assign_vars(array(
+		$this->template->assign_vars([
 			'S_ELONW'	=>	!empty($this->user->data['user_elonw']) ? true : false,
-		));
+		]);
 	}
 
 	/**
@@ -83,17 +114,17 @@ class listener implements EventSubscriberInterface
 	public function ucp_prefs_get_data($event)
 	{
 		// Request the user option vars and add them to the data array
-		$event['data'] = array_merge($event['data'], array(
+		$event['data'] = array_merge($event['data'], [
 			'elonw'	=> $this->request->variable('elonw', (int) $this->user->data['user_elonw']),
-		));
+		]);
 
 		// Output the data vars to the template (except on form submit)
 		if (!$event['submit'])
 		{
 			$this->language->add_lang('elonw_ucp', 'rmcgirr83/elonw');
-			$this->template->assign_vars(array(
+			$this->template->assign_var([
 				'S_UCP_ELONW'	=> $event['data']['elonw'],
-			));
+			]);
 		}
 	}
 
@@ -106,8 +137,8 @@ class listener implements EventSubscriberInterface
 	*/
 	public function ucp_prefs_set_data($event)
 	{
-		$event['sql_ary'] = array_merge($event['sql_ary'], array(
+		$event['sql_ary'] = array_merge($event['sql_ary'], [
 			'user_elonw' => $event['data']['elonw'],
-		));
+		]);
 	}
 }
