@@ -27,8 +27,6 @@
 	 */
 	$(function() {
 
-		var div = $('div');
-
 		$('a[href^="http://"], a[href^="https://"], a[href^="ftp://"]').filter(function(){
 			if ($(this).parents($("div")).is('.content, .signature') && this.hostname&&removeSubdomain(this.hostname)!==source)
 			{

@@ -55,7 +55,7 @@ class listener implements EventSubscriberInterface
 	{
 		return [
 			'core.acp_extensions_run_action_after'	=>	'acp_extensions_run_action_after',
-			'core.user_setup'						=>	'user_setup',
+			'core.user_setup_after'					=>	'user_setup_after',
 			'core.page_header' 						=>	'page_header',
 			'core.ucp_prefs_personal_data'			=>	'ucp_prefs_get_data',
 			'core.ucp_prefs_personal_update_data'	=>	'ucp_prefs_set_data',
@@ -73,10 +73,7 @@ class listener implements EventSubscriberInterface
 		if ($event['ext_name'] == 'rmcgirr83/elonw' && $event['action'] == 'details')
 		{
 			$this->language->add_lang('common', $event['ext_name']);
-			$this->template->assign_vars([
-				'L_BUY_ME_A_BEER_EXPLAIN'	=> $this->language->lang('BUY ME A BEER_EXPLAIN', '<a href="' . $this->language->lang('BUY_ME_A_BEER_URL') . '" target="_blank" rel=”noreferrer noopener”>', '</a>'),
-				'S_BUY_ME_A_BEER_ELONW' 	=> true,
-			]);
+			$this->template->assign_var('S_BUY_ME_A_BEER_ELONW', true);
 		}
 	}
 
@@ -86,7 +83,7 @@ class listener implements EventSubscriberInterface
 	* @param return null
 	* @access public
 	*/
-	public function user_setup($event)
+	public function user_setup_after($event)
 	{
 		$this->language->add_lang('common', 'rmcgirr83/elonw');
 	}
@@ -99,7 +96,7 @@ class listener implements EventSubscriberInterface
 	*/
 	public function page_header($event)
 	{
-		$this->template->assign_vars([
+		$this->template->assign_var([
 			'S_ELONW'	=>	!empty($this->user->data['user_elonw']) ? true : false,
 		]);
 	}
@@ -122,8 +119,8 @@ class listener implements EventSubscriberInterface
 		if (!$event['submit'])
 		{
 			$this->language->add_lang('elonw_ucp', 'rmcgirr83/elonw');
-			$this->template->assign_var([
-				'S_UCP_ELONW'	=> $event['data']['elonw'],
+			$this->template->assign_vars([
+				'S_UCP_ELONW'	=> $event['data']['elonw']
 			]);
 		}
 	}
