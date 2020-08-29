@@ -96,9 +96,7 @@ class listener implements EventSubscriberInterface
 	*/
 	public function page_header($event)
 	{
-		$this->template->assign_var([
-			'S_ELONW'	=>	!empty($this->user->data['user_elonw']) ? true : false,
-		]);
+		$this->template->assign_var('S_ELONW', (!empty($this->user->data['user_elonw'])) ? true : false);
 	}
 
 	/**
