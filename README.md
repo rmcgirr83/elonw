@@ -1,4 +1,4 @@
-# ![External links open in new window] ELONW for phpBB3
+# ELONW for phpBB3
 
 phpBB extension that uses jQuery to force external links to open in a new window when clicked on.
 
