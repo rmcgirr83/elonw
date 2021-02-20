@@ -21,25 +21,25 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 */
 class listener implements EventSubscriberInterface
 {
-	/** @var \phpbb\language\language */
+	/** @var language */
 	protected $language;
 
-	/** @var \phpbb\request\request */
+	/** @var request */
 	protected $request;
 
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
 
-	/** @var \phpbb\user */
+	/** @var user */
 	protected $user;
 
 	/**
 	* Constructor
 	*
-	* @param \phpbb\language\language 	$language	Language object
-	* @param \phpbb\request\request 	$request	Request object
-	* @param \phpbb\template\template 	$template	Template object
-	* @param \phpbb\user 				$user		User object
+	* @param language 	$language	Language object
+	* @param request 	$request	Request object
+	* @param template 	$template	Template object
+	* @param user 		$user		User object
 	* @return \rmcgirr83\elonw\event\listener
 	* @access public
 	*/
