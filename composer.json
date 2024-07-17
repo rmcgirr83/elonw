@@ -3,8 +3,8 @@
     "type": "phpbb-extension",
     "description": "Uses jQuery to force external links to open in a new window",
     "homepage": "https://github.com/RMcGirr83/elonw",
-    "version": "1.0.10",
-    "time": "2020-09-12",
+    "version": "1.0.11",
+    "time": "2024-07-16",
     "keywords": [
         "phpbb",
         "extension",
@@ -19,14 +19,14 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
-        "phpbb/phpbb": ">=3.2",
+        "php": ">=7.4",
+        "phpbb/phpbb": ">=3.3",
         "composer/installers": "~1.0"
     },
     "extra": {
         "display-name": "External Links Open in New Window",
         "soft-require": {
-            "phpbb/phpbb": ">=3.2"
+            "phpbb/phpbb": ">=3.3"
         },
         "version-check": {
             "host": "www.phpbb.com",
