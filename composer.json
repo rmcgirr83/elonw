@@ -3,8 +3,8 @@
     "type": "phpbb-extension",
     "description": "Uses jQuery to force external links to open in a new window",
     "homepage": "https://github.com/RMcGirr83/elonw",
-    "version": "1.0.11",
-    "time": "2024-07-16",
+    "version": "1.0.12",
+    "time": "2024-08-08",
     "keywords": [
         "phpbb",
         "extension",

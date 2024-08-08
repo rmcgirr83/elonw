@@ -18,7 +18,8 @@
 		'share-button',
 		'fancybox',
 		'lightbox',
-		'colorbox'
+		'colorbox',
+		'global-button'
 	];
 	var NotInClass = true;
 
